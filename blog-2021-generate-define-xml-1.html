@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Generating Define-XML v2.1 using odmlib</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sam Hume Blog Post">
+    <meta name="author" content="Sam Hume>    
+    <link rel="shortcut icon" href="hdl-icon-32.ico"> 
+    
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    
+
+</head> 
+
+<body class="dark-mode">
+    
+    <header class="header text-center">	    
+		<div class="force-overflow">
+			<h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Sam Hume</a></h1>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark" >
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navigation" class="collapse navbar-collapse flex-column" >
+					<div class="profile-section pt-3 pt-lg-0">
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/sam-avatar-github.jpg" alt="image" >									
+						
+						<div class="bio mb-3">Hi, I'm Sam and this is my personal website where I share my blog posts and open-source software projects.</div><!--//bio-->
+						<ul class="social-list list-inline py-2 mx-auto">
+							<li class="list-inline-item"><a href="https://www.linkedin.com/in/sam-hume-dsc"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://github.com/swhume"><i class="fab fa-github-alt fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://twitter.com/swhume"><i class="fab fa-twitter fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<hr> 
+					</div><!--//profile-section-->
+					
+					<ul class="navbar-nav flex-column text-left">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="portfolio.html"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="blog-home.html"><i class="fas fa-blog fa-fw mr-2"></i>Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html"><i class="fas fa-envelope-open-text fa-fw mr-2"></i>Contact</a>
+						</li>
+					</ul>
+					
+					<div class="my-2">
+						<a class="btn btn-primary" href="contact.html" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Contact Me</a>
+					</div>					
+				</div>
+			</nav>	
+		</div><!--//force-overflow-->
+	</header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Generating Define-XML v2.1 using odmlib</h2>
+				    <div class="meta mb-3"><span class="date">Published August 2021</span><span class="time">3 min read</span><span class="comment"></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <a href="https://github.com/swhume/swhume.github.io"><img class="img-fluid" src="assets/images/blog/blog-post-define-xml-800x560.jpg" alt="image"></a>
+				    </figure>
+
+				    <p>I introduced odmlib, an open-source Python library for working with ODM, in <a href="https://swhume.github.io/blog-2021-intro-to-odmlib.html" target="_blank">my first blog post </a> by providing a bit of background and walking through the creation of an ODM "hello, world" equivalent. In this post, I’ll walk through the highlights of generating a Define-XML v2.1 document using odmlib and a spreadsheet containing the metadata.</p>
+
+					<p>For many in the CDISC community, working with Define-XML represents how they work with the CDISC Data Exchange Standards. In this blog post I will highlight two odmlib example programs that work with Define-XML v2.1:
+                    <ul>
+                    	<li><strong>xlsx2define2-1.py</strong> generates a Define-XML v2.1 XML document using the odmlib-define-metadata.xlsx spreadsheet containing example metadata</li>
+                    	<li><strong>Define-2-1-to-xlsx.py</strong> generates a metadata spreadsheet from a Define-XML v2.1 XML document</li>
+					</ul>
+					</p>
+
+					<p>These simple example programs highlight a common use case: generating Define-XML from a metadata spreadsheet. These example programs can be enhanced to add new features, or the knowledge gained from these examples can be applied towards creating a more sophisticated odmlib-based Define-XML application.</p>
+
+					<h2>Getting Started</h2>
+
+					<p>To get started, download the odmlib examples from the <a href="https://github.com/swhume/odmlib_examples" target="_blank">odmlib_examples repository on my GitHub site</a>. The requirements.txt file references odmlib, in addition to the other libraries required by the example programs, but you may also install odmlib manually using pip.</p>
+
+					<pre><code>pip install odmlib</code></pre>
+
+					<p>Python 3.8 was used to develop the two Define-XML v2.1 examples, though a number of other recent versions should work.</p>
+
+					<p>Let’s start with running xlsx2define2-1.py with the example spreadsheet included in the project’s data directory.</p>
+
+					<pre><code>python xlsx2define2-1.py -e ./data/odmlib-define-metadata.xlsx -d ./data/odmlib-roundtrip-define.xml</code></pre>
+
+					<p>The -e indicates the Excel file that contains the metadata and the -d the Define-XML v2.1 file to create. If Python and the required libraries are installed correctly, the above command-line should generate the odmlib-roundtrip-define.xml file in the data directory using the metadata provided in the spreadsheet.</p>
+
+					<h2>Checking Your Define-XML Output</h2>	
+
+				<p>Once you’re able to run the example application to generate the Define-XML output, you can take the next step and check the Define-XML output against the schema and some basic conformance checks. To do this, add the -v to validate the output and include the -s to provide the path and filename of the Define-XML v2.1 schema. The schema is not included with the examples, so you will need to change the path in the reference below to point to the schema on your system. If you don’t have the schema on your system, download it from the <a href="https://www.cdisc.org/standards/data-exchange/define-xml" target="_blank">Define-XML page on the CDISC web site</a>. The following command-line example shows the addition of both schema validation and basic conformance checking to the Define-XML generation.</p>
+
+				<pre><code>
+python xlsx2define2-1.py -v -c
+    -e ./data/odmlib-define-metadata.xlsx 
+    -d ./data/odmlib-roundtrip-define.xml
+    -s /DefineV211/schema/cdisc-define-2.1/define2-1-0.xsd
+				</code></pre>
+
+				<h2>Generating a Spreadsheet From Define-XML v2.1</h2>
+
+				<p>Now that you’ve seen how to generate a Define-XML v2.1 file from a metadata spreadsheet, next I’ll cover how to generate the metadata spreadsheet from Define-XML using the define2-1-to-xlsx.py example application.</p>
+
+				<p>The define2-1-to-xlsx.py application uses -d to indicate the Define-XML v2.1 file and -p for the path to the Excel file. This application generates an Excel file named odmlib-define-metadata.xlsx. Given the odmlib-roundtrip-define.xml file provided in the data directory of the example program, or given the same file you just created by running the previous example program, the application generates the metadata spreadsheet. The following command-line example demonstrates this.</p>
+
+				<pre><code>python define2-1-to-xlsx.py -d ./data/odmlib-roundtrip-define.xml -p ./data/</code></pre>
+
+				<p>You can opt to validate the Define-XML before generating the spreadsheet by again adding the -v for validation and the -s for the path to the Define-XML v2.1 schema.</p>
+
+				<pre><code>python define2-1-to-xlsx.py -d ./data/odmlib-roundtrip-define.xml -p ./data/ -v -s /DefineV211/schema/cdisc-define-2.1/define2-1-0.xsd</code></pre>
+
+				<p>You could also go roundtrip and re-generate the Define-XML v2.1 from the new metadata spreadsheet using the xlsx2define2-1.py example program.</p>
+
+				<h2>Next Steps</h2>
+
+				<p>This post introduces two odmlib example applications that demonstrate the generation of Define-XML v2.1 from a metadata spreadsheet. These are example applications meant to demonstrate the basics of using the odmlib library.</p>
+
+				<p>These are simple example programs that have not been widely tested yet, but you can change or add new metadata rows to the existing worksheets and columns to generate your own Define-XML v2.1 file.</p>
+
+				<p>If you want to add your own worksheets and columns we’ll need to dig into the code. We’ll walk through making the code changes needed to add a worksheet or column in a future blog post.</p>
+
+				<!--				    
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-home.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+			-->
+				
+				<div class="blog-comments-section">
+					<div id="disqus_thread"></div>
+					<script>
+					    /**
+					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+					     *  PLATFORM OR CMS.
+					     *  
+					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+					     *  https://disqus.com/admin/universalcode/#configuration-variables
+					     */
+					    
+					    var disqus_config = function () {
+					        // Replace PAGE_URL with your page's canonical URL variable
+					        this.page.url = 'https://swhume.github.io/blog-2021-generate-define-xml-1.html';  
+					        
+					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					        this.page.identifier = 'blog-2021-generate-define-xml-1'; 
+					        this.page.title = 'Generating Define-XML v2.1 using odmlib'
+					    };
+					    
+					    
+					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+					        var d = document, s = d.createElement('script');
+					        
+					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
+					        s.src = 'https://https-swhume-github-io.disqus.com/embed.js';
+					        
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
+					    })();
+					</script>
+					<noscript>
+					    Please enable JavaScript to view the 
+					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+					        comments powered by Disqus.
+					    </a>
+					</noscript>
+				</div><!--//blog-comments-section-->
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    
+	     <footer class="footer text-center py-4">
+			<small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+		</footer>
+    
+    </div><!--//main-wrapper-->
+           
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+
+</body>
+</html> 
