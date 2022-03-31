@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Generating HTML from Define-XML</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sam Hume Blog Post">
+    <meta name="author" content="Sam Hume>    
+    <link rel="shortcut icon" href="hdl-icon-32.ico"> 
+    
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+    
+
+</head> 
+
+<body class="dark-mode">
+    
+    <header class="header text-center">	    
+		<div class="force-overflow">
+			<h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Sam Hume</a></h1>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark" >
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navigation" class="collapse navbar-collapse flex-column" >
+					<div class="profile-section pt-3 pt-lg-0">
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/sam-avatar-github.jpg" alt="image" >									
+						
+						<div class="bio mb-3">Hi, I'm Sam and this is my personal website where I share my blog posts and open-source software projects.</div><!--//bio-->
+						<ul class="social-list list-inline py-2 mx-auto">
+							<li class="list-inline-item"><a href="https://www.linkedin.com/in/sam-hume-dsc"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://github.com/swhume"><i class="fab fa-github-alt fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://twitter.com/swhume"><i class="fab fa-twitter fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<hr> 
+					</div><!--//profile-section-->
+					
+					<ul class="navbar-nav flex-column text-left">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="portfolio.html"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="blog-home.html"><i class="fas fa-blog fa-fw mr-2"></i>Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html"><i class="fas fa-envelope-open-text fa-fw mr-2"></i>Contact</a>
+						</li>
+					</ul>
+					
+					<div class="my-2">
+						<a class="btn btn-primary" href="contact.html" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Contact Me</a>
+					</div>					
+				</div>
+			</nav>	
+		</div><!--//force-overflow-->
+	</header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Generating HTML from Define-XML</h2>
+				    <div class="meta mb-3"><span class="date">Published April 2022</span><span class="time">3 min read</span><span class="comment"></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <a href="https://github.com/swhume/swhume.github.io"><img class="img-fluid" src="assets/images/blog/blog-post-xml2html-800x560.png" alt="image"></a>
+				    </figure>
+
+				    <p>This blog post describes an an open-source, command-line method to convert Define-XML to HTML using the define2-1 stylesheet</p>
+
+					<p>Recently, a few folks have asked for a simple way to convert a Define-XML to HTML without requiring the purchase of a software tool. These questions may be triggered by the fact that modern browsers do not transform local XML files using XSLT due to security concerns. IE11 is the last major browser to that transforms a local Define-XML document to HTML using an XSLT stylesheet reference, and as of 15-Jun-2022 IE11 will no longer be supported.</p>
+
+
+					<p>I often use the Oxygen XML editing software to convert XML files like Define-XML to HTML. Oxygen is not expensive, but it is a developer’s tool that may be overkill if your only need is to transform a Define-XML file to HTML. A well-known and widely used XSLT processor is available as open-source and also happens to be an XSLT processor used by Oxygen.</p>
+
+					<p>A simple, open-source approach to converting Define-XML to HTML is to use the Saxon XSLT and XQuery Processor with the define2-1.xsl style sheet created by Lex Jansen. The Saxon HE version is available as open-source. The following instructions list the steps to installing and running Saxon to transform your Define-XML document into an HTML rendering:
+					
+					<p><strong>1. <u>Make sure you have Java installed on your computer.</u></strong></p> 
+
+					<ul>
+						<li><p>I find most computers already have Java installed. If not, download from Oracle and install. You can use the command-line to test your computer for Java</p>
+
+					<pre><code>
+>java -version
+					</code></pre>
+
+					<p>If Java is installed and accessible you will see output similar to:</p>
+
+					<pre><code>
+java version "1.8.0_31"
+Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
+Java HotSpot(TM) Client VM (build 25.31-b07, mixed mode, sharing)
+					</code></pre>
+
+					<p>If Java is not installed or accessible you will see output similar to:</p>
+
+					<pre><code>
+'java' is not recognized as an internal or external command,
+operable program or batch file.
+					</code></pre>
+
+				</li>
+
+					<li><p>Here’s a link to the Oracle instructions for installing Java on Windows: <a href="https://www.java.com/en/download/help/windows_manual_download.html" target="_blank">Java download</a></p>
+				</li>
+			</ul>
+
+					<p><strong>2. <u>Download the open-source Saxon XSLT and XQuery Processor from SourceForge.</u></strong></p>
+
+					<ul>
+					<li><p>You can find the project on SourceForge here: <a href="https://sourceforge.net/projects/saxon/" target="_blank">Saxon download</a>.</p></li>
+
+					<li><p>Place the saxon .zip file anywhere on your hard disk - ideally somewhere easy to access to via command-line. </p></li>
+
+					<li>Do not place it in /Library/Java/Extensions or in UserName/Library/Java/Extensions or in a folder whose name contains a /</p></li>
+
+					<li><p>NOTE: Lex Jansen has included a version of Saxon in his GitHub repository and you can use that instead of downloading Saxon separately. We'll work with Lex's GitHub repository in the next step.</p></li>
+				</ul>
+
+					<p><strong>3. <u>Clone the define2-1.xsl stylesheet from the Lex Jansen’s GitHub repository.</u></strong></p>
+
+					<ul>
+					<li><p>You can find the project on the <a href="https://cosa.cdisc.org/" target="_blank">COSA Directory</a></p></li>
+					
+					<li><p>You can find instructions on cloning a GitHub repository here: <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">Cloning a Repository</a></p></li>
+
+					<li><p>Put the define2-1.xsl stylesheet in a directory easily accessible from the command-line.</p></li>
+
+					<li><p>The command to clone the GitHub repository is:</p>
+
+					<pre><code>
+git clone https://github.com/lexjansen/define-xml-2.1-stylesheets.git
+					</code></pre>
+					</li>
+				</ul>
+
+					<p><strong>4. <u>Generate your Define-xml file in a directory easily accessible from the command-line.</u></strong></p>
+
+					<p><strong>5. <u>Run saxon to transform the XML into HTML using the stylesheet</u></strong></p>
+
+					<ul>
+					<li><p>The command-line to transform the Define-XML document to HTML:</p>
+
+					<pre><code>
+>java -jar 'path/to/saxon-he-11.1.jar' -xsl:'path/to/define2-1.xsl' -s:'path/to/define.xml' -o:'path/to/define.html'
+					</code></pre>
+				</li>
+
+					<li><p>The version of the saxon .jar file may be higher, so adjust as needed. Obviously, you will need to adjust the paths and path formats to match your environment.</p></li>
+
+					<li><p>Double-click on the newly generated HTML file (e.g. define.html) to view it in the browser.</p></li>
+				</ul>
+
+					<p>Although there are 5 steps in the above instructions, all but one are used once to setup your system to run the transformations. Once you have your computer setup to run Saxon with the define2-1.xls stylesheet, just use command-line in Step 5 to repeat the transformation.</p>
+
+					<p>NOTE: This is one way to generate an HTML rendering of the Define-XML using the published stylesheet, but there are other methods worthy of consideration.</p>
+
+				<!--				    
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-home.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+			-->
+				
+				<div class="blog-comments-section">
+					<div id="disqus_thread"></div>
+					<script>
+					    /**
+					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+					     *  PLATFORM OR CMS.
+					     *  
+					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+					     *  https://disqus.com/admin/universalcode/#configuration-variables
+					     */
+					    
+					    var disqus_config = function () {
+					        // Replace PAGE_URL with your page's canonical URL variable
+					        this.page.url = 'https://swhume.github.io/blog-2022-generate-html-from-xml.html';  
+					        
+					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					        this.page.identifier = 'blog-2022-generate-html-from-xml'; 
+					        this.page.title = 'Generating HTML from Define-XML'
+					    };
+					    
+					    
+					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+					        var d = document, s = d.createElement('script');
+					        
+					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
+					        s.src = 'https://https-swhume-github-io.disqus.com/embed.js';
+					        
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
+					    })();
+					</script>
+					<noscript>
+					    Please enable JavaScript to view the 
+					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+					        comments powered by Disqus.
+					    </a>
+					</noscript>
+				</div><!--//blog-comments-section-->
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    
+	     <footer class="footer text-center py-4">
+			<small class="copyright">Template Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+		</footer>
+    
+    </div><!--//main-wrapper-->
+           
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js"></script>
+
+</body>
+</html> 
