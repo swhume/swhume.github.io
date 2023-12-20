@@ -3,6 +3,11 @@ layout: default
 ---
 
 <ul>
+      <li>
+          <h3><a href="https://swhume.github.io/blog-2022-generate-html-from-xml.html">Generating HTML from Define-XML</a></h3>
+          <small>April 2022</small>
+          <p>This post describes an an open-source, command-line method to convert Define-XML to HTML using the define2-1 stylesheet.</p>
+      </li>
     {% for post in paginator.posts %}
       <li>
           <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
