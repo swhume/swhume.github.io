@@ -4,15 +4,18 @@ layout: default
 
 <ul>
       <li>
-          <h3><a href="https://swhume.github.io/blog-2022-generate-html-from-xml.html">Generating HTML from Define-XML</a></h3>
+          <h2><a href="https://swhume.github.io/blog-2022-generate-html-from-xml.html">Generating HTML from Define-XML</a></h2>
           <small>April 2022</small>
           <p>This post describes an an open-source, command-line method to convert Define-XML to HTML using the define2-1 stylesheet.</p>
       </li>
-    {% for post in paginator.posts %}
       <li>
-          <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-          <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+          <h2><a href="https://swhume.github.io/blog-2021-generate-define-xml-1.html">Generating Define-XML v2.1 using odmlib</a></h2>
+          <small>August 2021</small>
+          <p>This post highlights an example program that demonstrates how to generate a Define-XML v2.1 file using a metadata spreadsheet.</p>
       </li>
-    {% endfor %}
+      <li>
+          <h2><a href="https://swhume.github.io/blog-2021-intro-to-odmlib.html"></a>Introducing odmlib</h2>
+          <small>June 2021</small>
+          <p>This post introduces the odmlib Python package that provides an object-oriented way to create and process ODM files as well as extensions like Define-XML.</p>
+      </li>
 </ul>
