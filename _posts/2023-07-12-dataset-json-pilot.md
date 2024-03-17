@@ -1,8 +1,8 @@
-*No More XPT? Piloting New Dataset-JSON For FDA Submissions*
+# No More XPT? Piloting New Dataset-JSON For FDA Submissions
 
 Orignally published in [Clinical Leader on July 12, 2023](https://www.clinicalleader.com/doc/no-more-xpt-piloting-new-dataset-json-for-fda-submissions-0001)
 
-**Introduction**
+## Introduction
 
 When submitting study datasets, the FDA requires organizations to use the SAS V5 XPORT (XPT), a format that dates back to 1989. Originally 
 announced in the FDA’s 1999 
@@ -23,7 +23,7 @@ FDA proof-of-concept using existing pre-clinical datasets, followed by (2) an FD
 be published in the first quarter of 2024 and shared at the 2024 PHUSE CSS conference. This project also includes Dataset-JSON focused workshops 
 and hackathons sponsored by PHUSE and the CDISC Open-Source Alliance (COSA).
 
-**About Dataset-JSON And Its Benefits**
+## About Dataset-JSON And Its Benefits
 
 Dataset-JSON is a modern dataset format designed to meet the regulatory requirements for submission datasets as well as support other 
 data exchange scenarios. It is based on the 
@@ -46,7 +46,7 @@ Overcoming the limitations imposed by XPT will initially benefit the regulators 
 The longer-term, more significant benefits will emerge as the constraints imposed on the CDISC Foundational Standards by XPT are removed, 
 allowing new standards versions to take advantage of Dataset-JSON’s enhanced capabilities.
 
-**New Software Tools To Support Dataset-JSON**
+## New Software Tools To Support Dataset-JSON
 
 In addition to the JSON support already available in nearly every programming language, a number of new software tools that 
 support Dataset-JSON are emerging, including those created as part of our Dataset-JSON Hackathon. These open-source tools perform 
@@ -64,7 +64,7 @@ PHUSE and COSA plan to host a series of workshops and hackathons to expand the n
 tools available that support Dataset-JSON as well as to help developers learn to use Dataset-JSON through hands-on 
 experience. Dataset-JSON will be the theme of the 2023 PHUSE CSS conference in September.
 
-**The FDA Pilot: Determining Whether Dataset-JSON Satisfies The FDA And Industry**
+## The FDA Pilot: Determining Whether Dataset-JSON Satisfies The FDA And Industry
 
 The challenge in moving from XPT to Dataset-JSON for regulatory submissions is two-fold:
 1. ensure that regulatory authorities have sufficient confidence in Dataset-JSON to accept it as an alternative to XPT and
@@ -89,7 +89,7 @@ The pilot deliverables include:
 - a business case to highlight the increased usability, flexibility, and other meaningful benefits derived from using Dataset-JSON for data exchange, including for regulatory submissions, and
 - a strategy for future development of the CDISC Foundational Standards to leverage the features of Dataset-JSON.
 
-**Getting More Information**
+## Getting More Information
 
 The Dataset-JSON specification has been finalized and is available on the [CDISC web site](https://www.cdisc.org/dataset-json). 
 The schemas and example datasets are available in a public [GitHub repository](https://github.com/cdisc-org/DataExchange-DatasetJson). 
@@ -98,7 +98,7 @@ A curated subset of the hackathon tools will be selected for inclusion in the FD
 Information on the PHUSE and COSA workshops and hackathons to help industry prepare to transition to using Dataset-JSON will be announced once 
 plans are finalized. Those interested in participating in the pilot should contact [workinggroups@phuse.global](mailto:workinggroups@phuse.global).
 
-**About The Author:**
+### About The Author
 
 Sam Hume leads CDISC’s data science team, which develops tools and standards that support clinical and translational research. 
 Sam directs delivery of the CDISC Library, co-leads the Data Exchange Standards team, and serves as a leader of CORE. Additionally, 
