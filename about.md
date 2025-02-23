@@ -1,5 +1,15 @@
 # Sam Hume
-### VP, Data Science, CDISC
+### Research Data Engineer | Open Source | Data Exchange Standards
 
-I'm the VP, Data Science at CDISC, a global Standards Development Organization (SDO) that creates data standards to enable information system interoperability in medical research and related areas of healthcare. The CDISC Data Science team develops the CDISC Library metadata repository that houses all CDISC standards, the CDISC Data Exchange Standards, RWD solutions, as well as a number of other technology focused projects. I am an active PhUSE participant and have over 25 years of work experience in clinical research informatics. I've published over 30 articles in the field and regularly speak at industry conferences. I have been the PI, Co-PI, or Co-Investigator on numerous grants, including working as the PI on the "Transforming Research through eSource and Standards" grant. Previously, I worked as Director of IS Architecture at AstraZeneca, VP of Technical Operations at Phoenix Data Systems, and Chief Technology Officer at CB Technologies. My doctorate is in information systems.
-I write about data engineering, software development, clinical research and healthcare informatics, and data standards on my blog. Check out my open source software projects and code snippets at portfolio.
+I'm a Research Data Engineer working part-time at CDISC. I blog about open-source software, data exchange standards, 
+clinical research informatics, and other largely technical topics.
+
+At CDISC I co-lead the Data Exchange Standards team, advise leadership on strategy, and contribute technical 
+leadership to 360i, COSA, CORE, and CDISC Library. I formerly served as the CDISC VP of Data Science for over 10 
+years, and I've been a volunteer for the Data Exchange Standards team since the early days. I've held 
+several senior-level technology positions during my 30+ years working in the biopharmaceutical industry. 
+
+I'm an active PHUSE contributor and some of my papers will make there way onto my blog. I typically post them here
+before I publish them elsewhere.
+
+For more background information you can find me on LinkedIn at https://www.linkedin.com/in/sam-hume-dsc.
