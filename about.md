@@ -12,4 +12,4 @@ several senior-level technology positions during my 30+ years working in the bio
 I'm an active PHUSE contributor and some of my papers will make there way onto my blog. I typically post them here
 before I publish them elsewhere.
 
-For more background information you can find me on LinkedIn at https://www.linkedin.com/in/sam-hume-dsc.
+For more background information you can find me on LinkedIn at [https://www.linkedin.com/in/sam-hume-dsc](https://www.linkedin.com/in/sam-hume-dsc).
