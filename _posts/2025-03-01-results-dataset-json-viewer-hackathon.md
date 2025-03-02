@@ -49,24 +49,24 @@ winner and runner-up. I think you'll be impressed by what they were able to acco
 Here's where you can find more information on the Dataset-JSON Viewer Hackathon projects (in no particular order):
 
 1.  VDE Dataset Viewer (Hackathon Winner)
-    - Repository: https://github.com/defineEditor/vde-dataset-viewer
-    - Short video demonstration: https://youtu.be/xdV8gyyyk3c
+    - [Viewer Repository](https://github.com/defineEditor/vde-dataset-viewer)
+    - [Short Video Demonstration](https://youtu.be/xdV8gyyyk3c)
 2.  Open Dataset-JSON (Hackathon Runner-up)
-    - Repository: https://github.com/1mgroot/Open-Dataset-JSON
-    - Short video demonstration: https://youtu.be/q9zXLHmDEhY
+    - [Viewer Repository](https://github.com/1mgroot/Open-Dataset-JSON)
+    - [Short Video Demonstration](https://youtu.be/q9zXLHmDEhY)
 3.  Smart Submission Dataset Viewer (Hackathon Honorable Mention)
-    - Repository: https://sourceforge.net/projects/smart-submission-dataset-viewe/
-    - Short video demonstration: https://youtu.be/veUXQecUp2s
+    - [Viewer Repository](https://sourceforge.net/projects/smart-submission-dataset-viewe/)
+    - [Short Video Demonstration](https://youtu.be/veUXQecUp2s)
 4.  Dataset-JSON Viewer - R-Shiny (Hackathon Honorable Mention)
-    - Repository: https://github.com/sbarcelo777/Dataset-JSON-hackathon
+    - [Viewer Repository](https://github.com/sbarcelo777/Dataset-JSON-hackathon)
 5.  JSON Visualizer (Hackathon Honorable Mention)
-    - Repository: https://github.com/pfizer-opensource/JSON_Visualizer.git
-    - Short video demonstration: https://github.com/pfizer-opensource/JSON_Visualizer/blob/main/JSON_Visualizer_Demo.mp4
+    - [Viewer Repository](https://github.com/pfizer-opensource/JSON_Visualizer.git)
+    - [Short Video Demonstration](https://github.com/pfizer-opensource/JSON_Visualizer/blob/main/JSON_Visualizer_Demo.mp4)
 6.  EDA Dataset-JSON Viewer (Hackathon Honorable Mention)
-    - Repository: https://github.com/explore-eda/dataset-json-viewer
+    - [Viewer Repository](https://github.com/explore-eda/dataset-json-viewer)
 7.  Dataset-JSON Visualization (Not an open-source project)
-    - Short video demonstration: https://youtu.be/OxIcZIaU_nw
-    - Website: https://www.dicoregroup.com
+    - [Short Video Demonstration](https://youtu.be/OxIcZIaU_nw)
+    - [Website](https://www.dicoregroup.com)
 
 Although the Dataset-JSON Viewer Hackathon was competitive, one of the cool dynamics was the free exchange of ideas 
 and information between the participants. There is no doubt that the open-source nature of these projects 
