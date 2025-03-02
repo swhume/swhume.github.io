@@ -23,9 +23,9 @@ simplifies programming tasks and abstracts away most of the XML knowledge needed
 documents.  It serializes ODM as XML or JSON and supports round-tripping or converting from one
 format to the other.
 
-Odmlib and the associated example programs can be accessed via public GitHub repositories [1, 2]
+Odmlib and the associated example programs can be accessed via public GitHub repositories[1, 2]
 and all the code has been released as open-source  software  under the MIT license.
-Odmlib  is also listed on the CDISC Open-Source Alliance (COSA) directory [3]. The odmlib
+Odmlib  is also listed on the CDISC Open-Source Alliance (COSA) directory[3]. The odmlib
 package remains under development but  has been  used for metadata processing , such as generating
 a study Define-XML. The remaining development work mainly involves additional testing and
 implementing any resulting fixes or refinements, as well as improving the documentation.
@@ -94,7 +94,7 @@ odm  = DEFINE.ODM(FileOID="DEF.COSA.DEMO",
               FileType="Snapshot", 
               Originator="Sam Hume",
               SourceSystem="odmlib", 
-              SourceSystemVersion="0.1. 4", 
+              SourceSystemVersion="0.1.4", 
               Context="Other")
 ```
 
@@ -109,9 +109,9 @@ values to the body of the element using the _content attribute as shown in the e
 
 ```python
 study = DEFINE.Study(OID="ST.DEFINE.COSA.001") 
-study.GlobalVariables.StudyName = DEFINE.StudyName (_content="TEST Define-XML ItemGroupDef") 
-study.GlobalVariables.StudyDescription = DEFINE.StudyDescription (_content="ItemGroupDef 001") 
-study.GlobalVariables.ProtocolName = DEFINE.ProtocolName (_content="Define-XML ItemGroupDef") 
+study.GlobalVariables.StudyName = DEFINE.StudyName(_content="TEST Define-XML ItemGroupDef") 
+study.GlobalVariables.StudyDescription = DEFINE.StudyDescription(_content="ItemGroupDef 001") 
+study.GlobalVariables.ProtocolName = DEFINE.ProtocolName(_content="Define-XML ItemGroupDef") 
 odm.Study = study 
 ```
 
@@ -149,9 +149,9 @@ Next, we create an ItemGroupDef object and add the ItemRef child elements.
 
 ```python
 igd = DEFINE.ItemGroupDef(OID="IG.VS", Name="VS",Repeating="Yes", Domain="VS",
-                SASDatasetName="VS",  IsReferenceData ="No",  Purpose="Tabulation", 
+                SASDatasetName="VS",  IsReferenceData="No",  Purpose="Tabulation", 
                 ArchiveLocationID="LF.VS", Structure="One record per vital sign measurement per visit per subject",
-                StandardOID="STD.1", IsNonStandard ="Yes", HasNoData ="Yes") 
+                StandardOID="STD.1", IsNonStandard="Yes", HasNoData="Yes") 
 
 igd.Description.TranslatedText.append(DEFINE.TranslatedText(_content="Vital Signs", lang="en")) 
 igd.ItemRef.append(DEFINE.ItemRef(ItemOID="IT.STUDYID", Mandatory="Yes", OrderNumber=1, KeySequence=1)) 
@@ -231,7 +231,7 @@ process an existing Define-XML file. To do this we need to import the Define-XML
 from odmlib import define_loader as DL, loader as LD
 
 define_uri = "http://www.cdisc.org/ns/def/v2.1" 
-loader = LD.ODMLoader(DL.XMLDefineLoader (model_package="define_2_1", ns_uri=define_uri)) 
+loader = LD.ODMLoader(DL.XMLDefineLoader(model_package="define_2_1", ns_uri=define_uri)) 
 loader.open_odm_document("./data/cosa_define_demo.xml") 
 ```
 
@@ -242,11 +242,11 @@ the Define-XML we can access and process content. The following code prints out 
 created earlier in this example . 
 
 ```python
-odm = loader.load_odm () 
-print( f"Study  OID is {odm.Study.OID}") 
-print( f"Study  Name is {odm.Study.GlobalVariables.StudyName}") 
-print( f"Study  Description is {odm.Study.GlobalVariables.StudyDescription}") 
-print( f"Protocol  Name is {odm.Study.GlobalVariables.ProtocolName}") 
+odm = loader.load_odm() 
+print( f"Study OID is {odm.Study.OID}") 
+print( f"Study Name is {odm.Study.GlobalVariables.StudyName}") 
+print( f"Study Description is {odm.Study.GlobalVariables.StudyDescription}") 
+print( f"Protocol Name is {odm.Study.GlobalVariables.ProtocolName}") 
 ```
 
 ## TRANSFORMING THE DEFINE-XML TO A DICTIONARY OR TO JSON
@@ -283,7 +283,7 @@ class CommentDef(OE.ODMElement):
     namespace = "def"
     OID = T.OID(required=True)
     Description = T.ODMObject(element_class=Description) 
-    DocumentRef = T.ODMListObject (element_class=DocumentRef, namespace="def") 
+    DocumentRef = T.ODMListObject(element_class=DocumentRef, namespace="def") 
 ```
 
 Every element of the model inherits from the ODMElement class. This class allows programmers to define
@@ -348,7 +348,7 @@ Creating a Define-XML is a use case of broad interest, but there are many other 
 including:
 - Generating ODM CRF definitions for study setup
 - Exchanging data using ODM
-- Processing CDISC  Controlled  Terminology
+- Processing CDISC Controlled Terminology
 - Generating a Define-XML for use as a study specification
 - Generating standards metadata from content retrieved from the CDISC Library using the ODM media type
 - Representing datasets using Dataset-XML
