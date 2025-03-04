@@ -1,7 +1,7 @@
 # Results from the COSA Dataset-JSON Viewer Hackathon
 
 We just wrapped up our 3rd Dataset-JSON COSA Hackathon, and this one may have been the best so far.
-All 3 Dataset-JSON hackathons have produced impactful outcomes, and all have filled a need within 
+All 3 Dataset-JSON hackathons have produced impactful outcomes and filled a need within 
 the Dataset-JSON community. Since we started the PHUSE-CDISC-FDA Dataset-JSON pilot, folks have been 
 asking me about the availability of Dataset-JSON Viewers. I'm thankful that I now have a good answer to 
 that question.
@@ -25,20 +25,20 @@ Viewers will be part of the 360i open-source tool set. Students attending CDISC'
 class will benefit from Viewers to explore Dataset-JSON datasets. Overall, requests for a Dataset-JSON Viewer 
 have come from numerous sources, including sponsors, regulators, vendors, and CROs.
 
-When the Dataset-JSON Viewer Hackathon judges got together to compare our individual scoring and select winners, something 
-unexpected happened - all 7 judges had ranked the top few projects the same. That made things easy. As a judge 
-myself, I can say that all 7 Viewer applications submitted were solid. They did the basics quite well and were 
-surprisingly capable given the limited amount of time the developers had to work on them.
+When the Dataset-JSON Viewer Hackathon judges got together to compare our scoring and select winners, something 
+unexpected happened - all 7 judges had ranked the top few projects the same. That made things easy. As a judge, 
+I can say that all 7 Viewer applications submitted were solid. They did the basics quite well and were 
+surprisingly capable given the limited time the developers had to work on them.
 
-The winning Viewer by Dmitry Kolosov, called the VDE Dataset Viewer, does many things well. It's a Viewer 
-that runs locally on your laptop. It is very easy to install, intuitive enough to start using without reading 
-the documentation, has a polished interface, has some advanced filtering capabilities, and it handled our 
+The winning Viewer by Dmitry Kolosov, called the VDE Dataset Viewer, does many things well. It runs locally on 
+your laptop. It is easy to install, intuitive enough to start using without reading 
+the documentation, has a polished interface, has some advanced filtering capabilities, and handled our 
 very large dataset test well. Remarkable for a product developed during a short hackathon.
 
-I believe that multiple Viewers may become widely used. Each project did some things well, and each 
-may satisfy different user needs. For example, the runner-up in the hackathon created a very nice 
+I believe that multiple Viewers may become widely used. Each project did some things well may satisfy 
+different user needs. For example, the runner-up in the hackathon created a very nice 
 web-based system that could be made available from a server. Another team built an R-Shiny application 
-that may be popular in R shops. Others have a rich feature set that goes beyond simply Viewing datasets, 
+that may be popular in R shops. Others have a rich feature set that goes beyond simply viewing datasets, 
 such as the Smart Submission Dataset Viewer with its conformance checking capabilities.
 
 If you're interested in seeing a demo of these Viewers, make sure to sign up for the next couple 
