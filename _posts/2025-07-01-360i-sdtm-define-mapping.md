@@ -15,6 +15,9 @@ url: https://swhume.github.io/
 shume@cdisc.org
 https://www.linkedin.com/in/sam-hume-dsc
 
+<!--
+I am speaking on behalf of the SDTM Define-XML Subteam about what we've been working on recently
+-->
 ---
 
 ## SDTM define-xml subteam task framework
