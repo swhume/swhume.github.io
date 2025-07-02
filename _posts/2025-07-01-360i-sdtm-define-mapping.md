@@ -8,12 +8,12 @@ author: Sam Hume
 keywords: 360i, Define-XML
 url: https://swhume.github.io/ 
 ---
-![bg right 30% CDISC 360i](https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/360i-logo.png)
+![bg right 80% CDISC 360i](https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/360i-logo.png)
 
 # 360i: Metadata mapping for SDTM define-xml specification generation
-**Sam Hume** (on behalf of the SDTM Define-XML Subteam)
-**Email:** shume@cdisc.org
-**LinkedIn:** https://www.linkedin.com/in/sam-hume-dsc
+**Sam Hume**
+shume@cdisc.org
+https://www.linkedin.com/in/sam-hume-dsc
 
 ---
 
@@ -65,5 +65,6 @@ url: https://swhume.github.io/
 4. continue to review and refine the DTA work
 
 ---
+![bg right 80% CDISC 360i](https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/360i-logo.png)
 
 # Questions?
