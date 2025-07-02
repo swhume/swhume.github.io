@@ -7,8 +7,23 @@ description: A 360i Sub-team Update
 author: Sam Hume
 keywords: 360i, Define-XML
 url: https://swhume.github.io/ 
+header: <div><div><img src="https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/360i-logo.png" /> </div> </div>
+style: |
+    header {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        box-sizing: border-box;
+        justify-content: center;
+        width: 100%;
+    }
+    header img {
+        height: 125px;
+        position: absolute;
+        right: 50px;
+    }
 ---
-![bg right 80% CDISC 360i](https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/360i-logo.png)
 
 # 360i: Metadata mapping for SDTM define-xml specification generation
 **Sam Hume**
@@ -68,6 +83,6 @@ I am speaking on behalf of the SDTM Define-XML Subteam about what we've been wor
 4. continue to review and refine the DTA work
 
 ---
-![bg right 80% CDISC 360i](https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/360i-logo.png)
+![bg right 80% CDISC 360i](https://raw.githubusercontent.com/swhume/swhume.github.io/master/assets/images/question-mark.jpeg)
 
 # Questions?
