@@ -1,3 +1,12 @@
+---
+title: "Why JSON for Datasets?"
+date: 2024-01-15 09:00:00 -0500
+categories: [Standards]
+tags: [cdisc, data-exchange]
+description: "This post explains the rationale for creating a dataset exchange format, Dataset-JSON, using JSON instead of alternative file formats and is motivated by the PHUSE/CDISC/FDA Dataset-JSON as Alternative Transport Format for Regulatory Submissions pilot project."
+permalink: /why-json-for-datasets/
+---
+
 # Why JSON for Datasets?
 
 This post explains the rationale for creating a dataset exchange format using JSON instead of alternative file formats. The PHUSE/CDISC/FDA [Dataset-JSON as Alternative Transport Format for Regulatory Submissions](https://advance.phuse.global/display/WEL/Dataset-JSON+as+Alternative+Transport+Format+for+Regulatory+Submissions) pilot project is the motivation for the post. Responses from pilot participants have been very positive, but we have received a few comments about alternative file formats. This post answers the question: Why JSON?

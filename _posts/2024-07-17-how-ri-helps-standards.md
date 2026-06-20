@@ -1,3 +1,12 @@
+---
+title: "How Reference Implementations Benefit Standards"
+date: 2024-07-17 09:00:00 -0500
+categories: [Standards, Open-source]
+tags: [open-source, cdisc, data-exchange]
+description: "This post introduces software reference implementations and how they contribute to standards development and adoption. As CDISC focuses on standards implementation, reference implementations become increasingly important."
+permalink: /how-ri-helps-standards/
+---
+
 # How Reference Implementations Benefit Standards
 
 ## Introduction

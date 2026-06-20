@@ -1,33 +1,30 @@
+---
+title: "Introducing odmlib"
+date: 2021-06-10 09:00:00 -0500
+categories: [Standards, Open-source]
+tags: [odmlib, open-source, cdisc, data-exchange]
+description: "This post introduces the odmlib Python package that provides an object-oriented way to create and process ODM files as well as extensions like Define-XML."
+permalink: /introducing-odmlib/
+---
+
 # Introducing odmlib
 
-As a Python developer I’ve had an interest in an ODM library that makes it easy to work with ODM and Define-XML 
-documents. During the CDISC 360 project, I worked on generating ODM and Define-XML documents using an object-oriented 
-approach. As I moved on from development work on the project, I decided to start developing a Python package that I 
-could re-use on future projects and satisfy my personal interest in an object-oriented library for creating and 
-processing ODM documents and its extensions. This package, named odmlib, remains under development but can be used for 
-basic metadata processing.
+As a Python developer I’ve had an interest in an ODM library that makes it easy to work with ODM and Define-XMLdocuments. During the CDISC 360 project, I worked on generating ODM and Define-XML documents using an object-oriented approach. As I moved on from development work on the project, I decided to start developing a Python package that I could re-use on future projects and satisfy my personal interest in an object-oriented library for creating and processing ODM documents and its extensions. This package, named odmlib, remains under development but can be used for basic metadata processing.
 
-Odmlib simplifies working with the CDISC ODM data exchange standard and its extensions in Python. It supports an 
-object-oriented approach and serializations in XML and JSON. Odmlib also supports conformance checks and schema 
-validation to ensure quality and standards compliance.
+Odmlib simplifies working with the CDISC ODM data exchange standard and its extensions in Python. It supports an object-oriented approach and serializations in XML and JSON. Odmlib also supports conformance checks and schema validation to ensure quality and standards compliance.
 
-You can find [odmlib on Github](https://github.com/swhume/odmlib). If you’re interested in experimenting with it, I 
-would recommend trying out one of the [example applications](https://github.com/swhume/odmlib_examples). The best place 
-to start is the get_started application to create and process a basic ODM file.
+You can find [odmlib on Github](https://github.com/swhume/odmlib). If you’re interested in experimenting with it, I would recommend trying out one of the [example applications](https://github.com/swhume/odmlib_examples). The best place to start is the get_started application to create and process a basic ODM file.
 
-To get acquainted with odmlib, let’s take a look at what amounts to the “hello, world” of ODM file creation. Before 
-you can use odmlib, you’ll need to install it. Although it’s still under development, a version of odmlib is available 
-on PyPI. Although not the most up-to-date, it’s the easiest to install:
+To get acquainted with odmlib, let’s take a look at what amounts to the “hello, world” of ODM file creation. Before you can use odmlib, you’ll need to install it. Although it’s still under development, a version of odmlib is available on PyPI. Although not the most up-to-date, it’s the easiest to install:
+
 ```
 pip install odmlib
 ```
 
-Since it’s still in development, if you want the latest version, to keep up with updates, or to contribute to its 
-development you’ll need to install it from the source. See the Getting Started section in the README.md in the odmlib 
-repository for details.
+Since it’s still in development, if you want the latest version, to keep up with updates, or to contribute to its development you’ll need to install it from the source. See the Getting Started section in the README.md in the odmlib repository for details.
 
-Now, let’s create the ODM root element. To create the root object, the object name is the same as the element name and 
-the attributes are set as part of object creation:
+Now, let’s create the ODM root element. To create the root object, the object name is the same as the element name and the attributes are set as part of object creation:
+
 ```python
 root = ODM.ODM(
 	FileOID="ODM.DEMO.001", 
@@ -42,21 +39,20 @@ root = ODM.ODM(
 )
 ```
 
-Now the variable root is set to the ODM object. All that remains is to create the child elements by instantiating and 
-appending them in the right order. For example, the Study element is created next and appended to ODM as follows:
+Now the variable root is set to the ODM object. All that remains is to create the child elements by instantiating and appending them in the right order. For example, the Study element is created next and appended to ODM as follows:
+
 ```python
 root.Study.append(ODM.Study(OID="ODM.GET.STARTED"))
 ```
 
-A Study object is created with the OID set to “ODM.GET.STARTED” and appended to root.Study. When there can be multiple 
-instances of an element, as is the case with Study, use a list to represent that element. The ODM standard specifies 
-that there can be 0 or more Study elements under the parent ODM element, as shown below:
+A Study object is created with the OID set to “ODM.GET.STARTED” and appended to root.Study. When there can be multiple instances of an element, as is the case with Study, use a list to represent that element. The ODM standard specifies that there can be 0 or more Study elements under the parent ODM element, as shown below:
+
 ```python
 ODM(Study*, AdminData*, ReferenceData*, ClinicalData*, ...)
 ```
 
-Follow this same approach to create the rest of this simple ODM file. Keep in mind the order in which you add elements 
-should match the order in the ODM specification. For example:
+Follow this same approach to create the rest of this simple ODM file. Keep in mind the order in which you add elements should match the order in the ODM specification. For example:
+
 ```python
 root.Study[0].GlobalVariables = ODM.GlobalVariables()
 root.Study[0].GlobalVariables.StudyName = 
@@ -67,18 +63,20 @@ root.Study[0].GlobalVariables.ProtocolName =
 ODM.ProtocolName(_content="ODM XML Get Started")
 ```
 
-This basic process is repeated to complete building the ODM file. Once all the content has been created, the ODM file 
-can be generated as XML and written to a file as follows:
+This basic process is repeated to complete building the ODM file. Once all the content has been created, the ODM file can be generated as XML and written to a file as follows:
+
 ```python
 root.write_xml("./data/simple_create.xml")
 ```
 
 If you want to generate JSON instead of XML, root can be serialized as JSON as follows:
+
 ```python
 root.write_json(“./data/simple_create.json”)
 ```
 
 Now you’ve got an ODM XML file. Here’s the entire example that shows creating a very simple ODM file in XML.
+
 ```python
 import odmlib.odm_1_3_2.model as ODM
 import datetime
@@ -142,5 +140,4 @@ root.write_xml(ODM_XML_FILE)
 root.write_json(ODM_JSON_FILE)
 ```
 
-That’s a very basic introduction to creating a simple ODM file using odmlib. Next post will cover reading and 
-processing this file. I’ll cover working with Define-XML in future posts.
+That’s a very basic introduction to creating a simple ODM file using odmlib. Next post will cover reading and processing this file. I’ll cover working with Define-XML in future posts.
