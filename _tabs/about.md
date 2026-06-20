@@ -30,6 +30,4 @@ Exchange Standards teams, and I remain an active PHUSE contributor. What I
 enjoy most is that this working in the open, alongside developers and modelers 
 around the world who care about the same problems.
 
-If your work sits where clinical data standards meet software,
-[here's how I can help](/work/). For the full professional history, find me on
-[LinkedIn](https://www.linkedin.com/in/sam-hume-dsc).
+For the full professional history, find me on [LinkedIn](https://www.linkedin.com/in/sam-hume-dsc).
