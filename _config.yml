@@ -1,32 +1,209 @@
-title: Sam Hume's Blog
-description: "Munging Metadata: A Technical Blog by Sam Hume"
-author:
-  name: "Sam Hume"
-  email: "humedatalabs@gmail.com"
-  url: "https://swhume.github.io/index.html"
+# The Site Configuration
 
-baseurl: /
+# Import the theme
+theme: jekyll-theme-chirpy
 
-source: .
-destination: ./_site
-permalink: /:title
-paginate: 12
-paginate_path: /page/:num/
+# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+lang: en
+
+# Change to your timezone › https://zones.arilyn.cc
+timezone: America/New_York # >>> Bellefonte, PA
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
+
+title: Munging Metadata # >>> the blog name, kept as-is (shows as the sidebar brand)
+
+tagline: Thoughts on open-source software, data exchange standards, and data engineering - Sam Hume # >>> subtitle
+
+description: >- # used by seo meta and the atom feed
+  A technical blog by Sam Hume on open-source software, data exchange standards, and data engineering, and clinical research informatics. I often cover topics such as odmlib, ODM, Define-XML, Dataset-JSON, CDISC Library, FHIR, Python, PHUSE, and CDISC.
+
+# Fill in the protocol & hostname for your site.
+# E.g. 'https://username.github.io', note that it does not end with a '/'.
+url: "https://humedatalabs.com" # >>> canonical domain (swap to humedatalabs.com here if you'd rather lead with the business domain)
+
+github:
+  username: swhume # >>>
+
+twitter:
+  username: swhume # >>> real handle; optional — X has faded for this audience, remove this block and the link below if you'd rather not surface it
+
+social:
+  # Change to your full name.
+  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  name: Sam Hume # >>>
+  email: sam@humedatalabs.com # >>> your current address; consider a you@humedata.com alias later
+  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
+  links:
+    # The first element serves as the copyright owner's link
+    - https://www.linkedin.com/in/sam-hume-dsc # >>> professional home, used as copyright link
+    - https://github.com/swhume # >>>
+    - https://twitter.com/swhume # >>> optional, see note above
+
+# Site Verification Settings
+webmaster_verifications:
+  google: # fill in your Google verification code
+  bing: # fill in your Bing verification code
+  alexa: # fill in your Alexa verification code
+  yandex: # fill in your Yandex verification code
+  baidu: # fill in your Baidu verification code
+  facebook: # fill in your Facebook verification code
+
+# ↑ --------------------------
+# The end of `jekyll-seo-tag` settings
+
+# Web Analytics Settings
+# >>> Left empty (off). If you ever want light, privacy-friendly numbers, GoatCounter is a good fit:
+# >>>   pageviews: { provider: goatcounter } and analytics.goatcounter.id below.
+analytics:
+  google:
+    id: # fill in your Google Analytics ID
+  goatcounter:
+    id: # fill in your GoatCounter ID
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
+
+# Prefer color scheme setting.
+# Keep empty to follow the system preference and show the light/dark toggle in the sidebar.
+theme_mode: dark # >>> empty = light/dark toggle, recommended
+
+# The CDN endpoint for media resources.
+cdn:
+
+# the avatar on sidebar, support local or CORS resources
+avatar: /assets/img/sam-logo.jpg # >>> add a headshot or simple wordmark at this path; a real image lifts credibility a lot
+
+# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+social_preview_image: # >>> optional: a 1200x630 image shown when posts are shared on LinkedIn
+
+# boolean type, the global switch for TOC in posts.
+toc: true # >>> good for your long technical posts
+
+comments:
+  # >>> Left disabled, consistent with a clean, low-maintenance site.
+  # >>> To enable later, giscus (GitHub Discussions-backed) suits a dev blog: set provider: giscus and fill the giscus block.
+  provider: # [disqus | utterances | giscus]
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo: # <gh-username>/<repo>
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled: # boolean, keep empty means false
+    env: # [development | production]
+
+pwa:
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    deny_paths:
+      # - "/example"
+
+paginate: 10 # >>> posts per index page (your old site used 12 — change if you prefer)
+
+# The base URL of your site
+baseurl: "" # >>> empty: site served at the domain root (apex custom domain)
+
+# ------------ The following options are not recommended to be modified ------------------
+# >>> Keep this section as the starter ships it, EXCEPT the single permalink line flagged below.
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: posts
     values:
-      layout: "post"
+      layout: post
+      comments: true # Enable comments in posts.
+      toc: true # Display TOC column in posts.
+      # >>> CHANGED FROM CHIRPY DEFAULT `/posts/:title/` TO PRESERVE YOUR EXISTING ROOT-LEVEL URLs.
+      # >>> Your current site serves posts at `/:title` (e.g. /why-json-for-datasets), so every
+      # >>> inbound link from talks, papers, and LinkedIn points there. Keeping this as `/:title/`
+      # >>> means those links keep resolving. Chirpy's internal links use `post.url`, which is
+      # >>> derived from this template, so related-post/nav links update automatically — the
+      # >>> starter's "do not modify" warning is overly cautious for this specific change.
+      permalink: /:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
 
-future: true
-plugins:
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-sitemap
+sass:
+  style: compressed
 
-# Custom variables
-owner : "Sam Hume"
-year : "2024"
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
