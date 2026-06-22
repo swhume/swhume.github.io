@@ -2,7 +2,7 @@
 title: "Using odmlib to Create ODM and Define-XML Tools in Python"
 date: 2022-05-02 09:00:00 -0500
 categories: [Standards, Open-source]
-tags: [odmlib, open-source, cdisc, data-exchange]
+tags: [odmlib, open-source, phuse,cdisc, data-exchange]
 description: "This post is a PHUSE US Connect 2022 paper (OS01) that introduces the odmlib Python library for working with ODM and its extensions and spotlights using odmlib to generate a Define-XML v2.1 document."
 permalink: /phuse-os01-odmlib/
 ---

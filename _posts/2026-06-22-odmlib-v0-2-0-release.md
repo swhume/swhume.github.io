@@ -1,6 +1,6 @@
 ---
 title: "Introducing odmlib v0.2.0: A More Developer-Friendly ODM/Define-XML Library"
-date: 2026-06-22 09:00:00 -0500
+date: 2026-06-21 07:00:00 -0500
 categories: [Standards, Open-source]
 tags: [odmlib, open-source, cdisc, data-exchange]
 description: "odmlib v0.2.0 updates and the push to v1.0"

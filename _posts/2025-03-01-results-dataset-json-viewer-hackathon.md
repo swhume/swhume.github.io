@@ -2,14 +2,14 @@
 title: "Results from the COSA Dataset-JSON Viewer Hackathon"
 date: 2025-03-01 09:00:00 -0500
 categories: [Standards, Open-source]
-tags: [open-source, cdisc, data-exchange]
+tags: [open-source, dataset-json, cdisc, data-exchange]
 description: "Links to the winning submissions in the COSA Dataset-JSON Viewer Hackathon"
 permalink: /results-dataset-json-viewer-hackathon/
 ---
 
 # Results from the COSA Dataset-JSON Viewer Hackathon
 
-We just wrapped up our 3rd Dataset-JSON COSA Hackathon, and this one may have been the best so far. All 3 Dataset-JSON hackathons have produced impactful outcomes and filled a need within 
+We [tools](../tools)just wrapped up our 3rd Dataset-JSON COSA Hackathon, and this one may have been the best so far. All 3 Dataset-JSON hackathons have produced impactful outcomes and filled a need within 
 the Dataset-JSON community. Since we started the PHUSE-CDISC-FDA Dataset-JSON pilot, folks have been asking me about the availability of Dataset-JSON Viewers. I'm thankful that I now have a good answer to that question.
 
 Each of the 3 Dataset-JSON hackathons was organized differently. The first hackathon teams worked on any Dataset-JSON tooling that interested them. We stated a priority need for conversion tools, but there were no restrictions on the type of Dataset-JSON tools developed. That hackathon produced something like 21 projects and several conversion tools. Those same conversion tools allowed us to quickly start and successfully complete the PHUSE-CDISC-FDA Dataset-JSON pilot project. The second hackathon was a collaborative effort to produce a draft Dataset-JSON REST API specification. That API specification is now being used as a draft standard, and we plan to publish the final version later this year. Our third and

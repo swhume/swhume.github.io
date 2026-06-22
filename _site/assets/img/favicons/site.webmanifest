@@ -3,7 +3,7 @@
 {
   "name": "Munging Metadata",
   "short_name": "Munging Metadata",
-  "description": "A technical blog by Sam Hume on open-source software, research data engineering, data exchange standards, and clinical research informatics. I often cover topics such as odmlib, ODM, Define-XML, Dataset-JSON, CDISC Library, FHIR, PHUSE, and CDISC.",
+  "description": "A technical blog by Sam Hume on open-source software, data exchange standards, and data engineering, and clinical research informatics. I often cover topics such as odmlib, ODM, Define-XML, Dataset-JSON, CDISC Library, FHIR, Python, PHUSE, and CDISC.",
   "icons": [
     {
       "src": "/assets/img/favicons/web-app-manifest-192x192.png",
