@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>http://0.0.0.0:4000/</id>
   <title>Munging Metadata</title>
-  <subtitle>A technical blog by Sam Hume on open-source software, research data engineering, data exchange standards, and clinical research informatics. I often cover topics such as odmlib, ODM, Define-XML, Dataset-JSON, CDISC Library, FHIR, PHUSE, and CDISC.</subtitle>
-  <updated>2026-06-16T08:45:12-04:00</updated>
+  <subtitle>A technical blog by Sam Hume on open-source software, data exchange standards, and data engineering, and clinical research informatics. I often cover topics such as odmlib, ODM, Define-XML, Dataset-JSON, CDISC Library, FHIR, Python, PHUSE, and CDISC.</subtitle>
+  <updated>2026-06-22T08:06:55-04:00</updated>
   <author>
     <name>Sam Hume</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>http://0.0.0.0:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="http://0.0.0.0:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
   <rights> © 2026 Sam Hume </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,40 @@
 
   
   <entry>
+    <title>Introducing odmlib v0.2.0: A More Developer-Friendly ODM/Define-XML Library</title>
+    <link href="http://0.0.0.0:4000/odmlib-v0-2-0-release/" rel="alternate" type="text/html" title="Introducing odmlib v0.2.0: A More Developer-Friendly ODM/Define-XML Library" />
+    <published>2026-06-21T08:00:00-04:00</published>
+  
+    <updated>2026-06-21T08:00:00-04:00</updated>
+  
+    <id>http://0.0.0.0:4000/odmlib-v0-2-0-release/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/odmlib-v0-2-0-release/" />
+    <author>
+      <name>Sam Hume</name>
+    </author>
+
+  
+    
+    <category term="Standards" />
+    
+    <category term="Open-source" />
+    
+  
+
+  <summary>odmlib v0.2.0 updates and the push to v1.0</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Dataset Specializations vs. Biomedical Concept Variants</title>
-    <link href="http://localhost:4000/dataset-specializations-vs-bc-variants/" rel="alternate" type="text/html" title="Dataset Specializations vs. Biomedical Concept Variants" />
+    <link href="http://0.0.0.0:4000/dataset-specializations-vs-bc-variants/" rel="alternate" type="text/html" title="Dataset Specializations vs. Biomedical Concept Variants" />
     <published>2026-03-02T09:00:00-05:00</published>
   
     <updated>2026-03-02T09:00:00-05:00</updated>
   
-    <id>http://localhost:4000/dataset-specializations-vs-bc-variants/</id>
-    <content type="text/html" src="http://localhost:4000/dataset-specializations-vs-bc-variants/" />
+    <id>http://0.0.0.0:4000/dataset-specializations-vs-bc-variants/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/dataset-specializations-vs-bc-variants/" />
     <author>
       <name>Sam Hume</name>
     </author>
@@ -45,13 +71,13 @@
   
   <entry>
     <title>Automating Define-XML Generation in CDISC 360i</title>
-    <link href="http://localhost:4000/automating-define-generation-360i/" rel="alternate" type="text/html" title="Automating Define-XML Generation in CDISC 360i" />
+    <link href="http://0.0.0.0:4000/automating-define-generation-360i/" rel="alternate" type="text/html" title="Automating Define-XML Generation in CDISC 360i" />
     <published>2026-02-09T09:00:00-05:00</published>
   
     <updated>2026-02-09T09:00:00-05:00</updated>
   
-    <id>http://localhost:4000/automating-define-generation-360i/</id>
-    <content type="text/html" src="http://localhost:4000/automating-define-generation-360i/" />
+    <id>http://0.0.0.0:4000/automating-define-generation-360i/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/automating-define-generation-360i/" />
     <author>
       <name>Sam Hume</name>
     </author>
@@ -71,13 +97,13 @@
   
   <entry>
     <title>Top 10 Reasons for Using Dataset-JSON over Parquet for Data Exchange</title>
-    <link href="http://localhost:4000/top-10-reasons-dsj-over-parquet/" rel="alternate" type="text/html" title="Top 10 Reasons for Using Dataset-JSON over Parquet for Data Exchange" />
+    <link href="http://0.0.0.0:4000/top-10-reasons-dsj-over-parquet/" rel="alternate" type="text/html" title="Top 10 Reasons for Using Dataset-JSON over Parquet for Data Exchange" />
     <published>2025-11-15T09:00:00-05:00</published>
   
-    <updated>2025-11-15T09:00:00-05:00</updated>
+    <updated>2026-06-19T20:32:05-04:00</updated>
   
-    <id>http://localhost:4000/top-10-reasons-dsj-over-parquet/</id>
-    <content type="text/html" src="http://localhost:4000/top-10-reasons-dsj-over-parquet/" />
+    <id>http://0.0.0.0:4000/top-10-reasons-dsj-over-parquet/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/top-10-reasons-dsj-over-parquet/" />
     <author>
       <name>Sam Hume</name>
     </author>
@@ -95,13 +121,13 @@
   
   <entry>
     <title>Powering Standards With Code: The Role Of Open Source In CDISC 360i (Paper)</title>
-    <link href="http://localhost:4000/powering-standards-with-code/" rel="alternate" type="text/html" title="Powering Standards With Code: The Role Of Open Source In CDISC 360i (Paper)" />
+    <link href="http://0.0.0.0:4000/powering-standards-with-code/" rel="alternate" type="text/html" title="Powering Standards With Code: The Role Of Open Source In CDISC 360i (Paper)" />
     <published>2025-09-26T10:00:00-04:00</published>
   
-    <updated>2025-09-26T10:00:00-04:00</updated>
+    <updated>2026-06-19T20:32:05-04:00</updated>
   
-    <id>http://localhost:4000/powering-standards-with-code/</id>
-    <content type="text/html" src="http://localhost:4000/powering-standards-with-code/" />
+    <id>http://0.0.0.0:4000/powering-standards-with-code/</id>
+    <content type="text/html" src="http://0.0.0.0:4000/powering-standards-with-code/" />
     <author>
       <name>Sam Hume</name>
     </author>
@@ -115,32 +141,6 @@
   
 
   <summary>Paper for the PHUSE SDE 2025 in West Windsor, NJ on July 23rd, 2025.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Powering Standards with Code: The Role of Open Source in CDISC 360i (slides)</title>
-    <link href="http://localhost:4000/phuse-sde-360i-oss/" rel="alternate" type="text/html" title="Powering Standards with Code: The Role of Open Source in CDISC 360i (slides)" />
-    <published>2025-07-23T10:00:00-04:00</published>
-  
-    <updated>2025-07-23T10:00:00-04:00</updated>
-  
-    <id>http://localhost:4000/phuse-sde-360i-oss/</id>
-    <content type="text/html" src="http://localhost:4000/phuse-sde-360i-oss/" />
-    <author>
-      <name>Sam Hume</name>
-    </author>
-
-  
-    
-    <category term="Standards" />
-    
-    <category term="Open-source" />
-    
-  
-
-  <summary>Presentation given at the PHUSE SDE 2025 in West Windsor (NJ) on July 23rd, 2025</summary>
 
   </entry>
 

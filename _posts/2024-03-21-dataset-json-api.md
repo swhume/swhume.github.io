@@ -2,7 +2,7 @@
 title: "The Dataset-JSON API"
 date: 2024-03-21 09:00:00 -0500
 categories: [Standards, Open-source]
-tags: [open-source, cdisc, data-exchange, api]
+tags: [open-source, dataset-json, cdisc, data-exchange, api]
 description: "This post builds on my previous Dataset-JSON post and covers a draft Dataset-JSON API specification created during a COSA Hackathon."
 permalink: /dataset-json-api/
 ---

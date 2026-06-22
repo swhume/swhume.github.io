@@ -2,7 +2,7 @@
 title: "Powering Standards With Code: The Role Of Open Source In CDISC 360i (Paper)"
 date: 2025-09-26 09:00:00 -0500
 categories: [Standards, Open-source]
-tags: [open-source, cdisc, data-exchange]
+tags: [open-source, phusem cdisc, data-exchange]
 description: "Paper for the PHUSE SDE 2025 in West Windsor, NJ on July 23rd, 2025."
 permalink: /powering-standards-with-code/
 ---
