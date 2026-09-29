@@ -122,8 +122,8 @@ pwa:
   enabled: true # The option for PWA feature (installable)
   cache:
     enabled: true # The option for PWA offline cache
-    deny_paths:
-      # - "/example"
+    deny_paths:   # - "/example"
+      - "/odmlib/"
 
 paginate: 10 # >>> posts per index page (your old site used 12 — change if you prefer)
 
