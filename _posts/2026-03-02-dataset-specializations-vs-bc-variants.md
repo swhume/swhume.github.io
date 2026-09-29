@@ -4,6 +4,7 @@ date: 2026-03-02 09:00:00 -0500
 categories: [Standards]
 tags: [semantics, cdisc, data-exchange]
 description: "Reply to Kerstin's LinkedIn Post on BC Variants."
+permalink: /dataset-specializations-vs-bc-variants/
 ---
 
 # Dataset Specializations vs. Biomedical Concept Variants
